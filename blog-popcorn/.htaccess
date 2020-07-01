@@ -1,0 +1,12 @@
+ErrorDocument 403 /blog-popcorn/view/error.php
+ErrorDocument 404 /blog-popcorn/view/error.php
+ErrorDocument 405 /blog-popcorn/view/error.php
+ErrorDocument 408 /blog-popcorn/view/error.php
+ErrorDocument 500 /blog-popcorn/view/error.php
+ErrorDocument 502 /blog-popcorn/view/error.php
+ErrorDocument 504 /blog-popcorn/view/error.php
+
+RewriteEngine On
+RewriteRule ^([^_]*)_([^_]*)\.html$ /blog-popcorn/?p=$1&a=$2 [L]
+RewriteRule ^([^_]*)_([^_]*)_([^_]*)\.html$ /blog-popcorn/?p=$1&a=$2&id=$3 [L]
+RewriteRule ^([^_]*)_([^_]*)_([^_]*)_([^_]*)_([^_]*)\.html$ /blog-popcorn/?p=$1&a=$2&postid=$3&commentId=$4&vote=$5 [L]
